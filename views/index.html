@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="60" />
+    <title>MP - REDMINIMARKET</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --mp-blue: #009ee3;
+        --mp-blue-dark: #00263a;
+        --mp-yellow: #fff159;
+        --mp-bg: #ffffff;
+        --mp-card: #ffffff;
+        --mp-text: #333333;
+        --mp-text-light: #6c6c6c;
+        --mp-green: #39b54a;
+        --mp-green-bg: #e6f8e8;
+        --mp-red: #e74c3c;
+        --mp-red-bg: #fdecea;
+        --mp-yellow-bg: #fff8d6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--mp-bg);
+        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+        color: var(--mp-text);
+      }
+
+      header {
+        width: 100%;
+        background: var(--mp-blue);
+        padding: 24px 16px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        display: inline-block;
+
+      }
+
+      header h2 {
+          display: inline-block;
+          margin-left: 8px;
+      }
+
+      main {
+        max-width: 1350px;
+        margin: 32px auto;
+        padding: 0 16px;
+      }
+
+      .card {
+        background: var(--mp-card);
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        overflow: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        text-align: center;
+        margin: auto;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        color: var(--mp-text-light);
+        background: #fafafa;
+        padding: 14px 16px;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      td {
+        padding: 14px 16px;
+        font-size: 14px;
+        border-bottom: 1px solid #f1f1f1;
+        text-align: center;
+        margin: auto;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tbody tr:hover {
+        background: #f7fbfe;
+      }
+
+      td.amount {
+        font-weight: 600;
+        color: var(--mp-blue-dark);
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      .badge.approved {
+        color: var(--mp-green);
+        background: var(--mp-green-bg);
+      }
+
+      .badge.pending,
+      .badge.in_process {
+        color: #b8860b;
+        background: var(--mp-yellow-bg);
+      }
+
+      .badge.rejected,
+      .badge.cancelled {
+        color: var(--mp-red);
+        background: var(--mp-red-bg);
+      }
+
+      .badge.default {
+        color: var(--mp-text-light);
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>REDMINIMARKET:</h1>
+        <h2>Últimas actividades</h2>
+    </header>
+
+    <main>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Monto</th>
+              <th>Estado</th>
+              <th>Nombre</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ROWS}}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

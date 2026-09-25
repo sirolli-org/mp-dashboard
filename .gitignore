@@ -1,0 +1,18 @@
+# Environment
+.env*
+!.env*.example
+
+# Private
+*.priv.*
+*-priv.*
+
+# Node
+node_modules
+
+# Build
+dist/
+
+# Misc
+.vscode/
+.idea/
+.DS_Store
